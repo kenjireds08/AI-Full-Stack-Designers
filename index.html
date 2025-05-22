@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIelia（アイエリア） - AIフルスタックデザイナーを目指す女性のためのスクール</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+            background-color: #fcfcfc;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f2e7fe 0%, #e3f2fd 100%);
+        }
+        
+        .purple-gradient {
+            background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+        }
+        
+        .pink-gradient {
+            background: linear-gradient(135deg, #f48fb1 0%, #ce93d8 100%);
+        }
+        
+        .blue-gradient {
+            background: linear-gradient(135deg, #90caf9 0%, #b39ddb 100%);
+        }
+        
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(156, 39, 176, 0.2);
+        }
+        
+        .price-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(156, 39, 176, 0.2);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(156, 39, 176, 0.3);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+            border-radius: 3px;
+        }
+        
+        .benefit-card {
+            border-left: 4px solid #9c27b0;
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateX(5px);
+        }
+        
+        .concern-card {
+            border-left: 4px solid #f48fb1;
+            transition: transform 0.3s ease;
+        }
+        
+        .concern-card:hover {
+            transform: translateX(5px);
+        }
+        
+        .aspiration-card {
+            border-left: 4px solid #90caf9;
+            transition: transform 0.3s ease;
+        }
+        
+        .aspiration-card:hover {
+            transform: translateX(5px);
+        }
+        
+        .highlight {
+            background: linear-gradient(transparent 70%, #f8bbd0 70%);
+            font-weight: 700;
+        }
+        
+        .full-stack-label {
+            background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+            z-index: 1;
+        }
+        
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 15px;
+            width: 2px;
+            height: calc(100% + 5px);
+            background-color: #e0e0e0;
+            z-index: 0;
+        }
+        
+        .timeline-item:last-child:after {
+            display: none;
+        }
+        
+        .qa-item {
+            border-left: 4px solid #9c27b0;
+            transition: all 0.3s ease;
+        }
+        
+        .qa-item:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .card-shadow {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .parent-friendly {
+            display: inline-flex;
+            align-items: center;
+            background-color: #e8f5e9;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            color: #2e7d32;
+            font-weight: 500;
+            margin: 5px 0;
+            font-size: 1.2rem;
+        }
+        
+        .ai-benefit {
+            display: inline-flex;
+            align-items: center;
+            background-color: #e3f2fd;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            color: #1565c0;
+            font-weight: 500;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold text-purple-700">
+                    <span class="text-purple-800">AI</span>elia <span class="text-sm text-gray-500">アイエリア</span>
+                </h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#intro" class="text-gray-600 hover:text-purple-700 transition-colors">スクール紹介</a>
+                <a href="#features" class="text-gray-600 hover:text-purple-700 transition-colors">特徴</a>
+                <a href="#curriculum" class="text-gray-600 hover:text-purple-700 transition-colors">カリキュラム</a>
+                <a href="#price" class="text-gray-600 hover:text-purple-700 transition-colors">料金</a>
+                <a href="#faq" class="text-gray-600 hover:text-purple-700 transition-colors">よくある質問</a>
+            </nav>
+            <a href="#contact" class="btn-primary text-white px-4 py-2 rounded-full text-sm font-semibold hidden md:block">個別相談はこちら</a>
+        </div>
+    </header>
+
+    <!-- ファーストビュー -->
+    <section class="pt-24 pb-12 md:pt-28 md:pb-16 gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="full-stack-label mb-3">新時代の職業</div>
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+                        AI<span class="text-purple-700">フルスタックデザイナー</span>で、私の創造力を加速する。
+                    </h1>
+                    <h2 class="text-xl md:text-2xl font-semibold mb-6 text-gray-700">
+                        未経験からWebもアプリも、思いのままに。
+                    </h2>
+                    <p class="text-gray-600 mb-6 text-base md:text-lg">
+                        AIを活用したホームページ・LP制作からオリジナルアプリ開発まで。<br>
+                        <span class="highlight">フロントエンドからバックエンドまでAIの力で一人でできる</span><br>
+                        あなたの「好き」と「得意」をカタチにする、女性のための<br class="hidden md:block">AIクリエイタースクール誕生！
+                    </p>
+                    
+                    <div class="flex flex-wrap items-center mb-8">
+                        <span class="parent-friendly mr-3 mb-2">
+                            <i class="fas fa-baby mr-2"></i>子育て世代も安心
+                        </span>
+                        <span class="ai-benefit mr-3 mb-2">
+                            <i class="fas fa-robot mr-2"></i>AI活用で学習時間半減
+                        </span>
+                    </div>
+                    
+                    <div class="flex flex-wrap justify-start items-center mb-6">
+                        <div class="bg-white rounded-lg px-3 py-2 shadow-sm mr-4 mb-3">
+                            <span class="text-sm text-gray-600">現役Webエンジニアが直接指導</span>
+                        </div>
+                        <div class="bg-white rounded-lg px-3 py-2 shadow-sm mr-4 mb-3">
+                            <span class="text-sm text-gray-600">AI活用ノウハウを実践的に学べる</span>
+                        </div>
+                        <div class="bg-white rounded-lg px-3 py-2 shadow-sm mb-3">
+                            <span class="text-sm text-gray-600">卒業後も継続サポート</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn-primary text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg">
+                        <i class="far fa-comment-dots mr-2"></i>まずは個別相談に申し込む
+                        <small class="block text-xs mt-1 font-normal">かんたん30秒で予約完了</small>
+                    </a>
+                </div>
+                <div class="md:w-1/2 pl-0 md:pl-10 flex justify-center">
+                    <div class="relative">
+                        <div class="bg-white p-3 rounded-lg shadow-lg transform rotate-3">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="女性がパソコンで作業している様子" class="rounded w-full">
+                        </div>
+                        <div class="absolute -bottom-5 -left-5 bg-white p-3 rounded-lg shadow-lg transform -rotate-2">
+                            <div class="text-sm font-semibold text-purple-700 mb-1">AIを使えば、こんなことも作れる！</div>
+                            <div class="flex space-x-2">
+                                <img src="https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="作品例1" class="w-16 h-16 rounded object-cover">
+                                <img src="https://images.unsplash.com/photo-1517292987719-0369a794ec0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="作品例2" class="w-16 h-16 rounded object-cover">
+                                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="作品例3" class="w-16 h-16 rounded object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AIフルスタックデザイナーとは？ -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-3xl font-bold mb-12">
+                <span class="text-purple-700">AI時代</span>、あなたも「AIフルスタックデザイナー」になれる
+            </h2>
+            <div class="bg-purple-50 p-6 rounded-xl mb-12">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h3 class="text-2xl font-bold mb-4 text-purple-700">AIフルスタックデザイナーとは？</h3>
+                        <p class="mb-4">AIの力を最大限活用して、<strong>企画からデザイン、コーディング、バックエンド開発まで</strong>、Webサイトやアプリ制作を<strong>一人で完結</strong>できる次世代型クリエイター。</p>
+                        <p class="mb-4">高度な専門知識がなくても、AIツールの適切な使い方さえマスターすれば、<strong>複雑な技術的障壁を乗り越えながら</strong>、アイデアを形にできます。</p>
+                        <p class="mb-4">今までは別々の専門家が担当していた工程を、<strong>あなた一人</strong>でこなせるようになるのです。</p>
+                        <div class="parent-friendly">
+                            <i class="fas fa-clock mr-2"></i>面倒な勉強はAIにお任せ、あなたは表現に全集中
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-10">
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <div class="text-center mb-4">
+                                <span class="text-xl font-bold text-purple-700">従来のWeb開発とAI活用の違い</span>
+                            </div>
+                            <div class="flex mb-8">
+                                <div class="w-1/2 pr-4 border-r border-gray-200">
+                                    <h4 class="font-bold text-gray-700 mb-3">従来の方法</h4>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-times-circle text-red-500 mt-1 mr-2"></i>
+                                            <span>複数言語・技術の習得に数年</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-times-circle text-red-500 mt-1 mr-2"></i>
+                                            <span>専門分野ごとに人材が必要</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-times-circle text-red-500 mt-1 mr-2"></i>
+                                            <span>エラー解決に何時間も費やす</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-times-circle text-red-500 mt-1 mr-2"></i>
+                                            <span>コストと時間がかかる</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="w-1/2 pl-4">
+                                    <h4 class="font-bold text-purple-700 mb-3">AIフルスタック方式</h4>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                            <span>AIの力で短期間で習得可能</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                            <span>一人で企画〜実装まで完結</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                            <span>AIがエラー解決をサポート</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                            <span>時間とコストを大幅削減</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 悩み・共感セクション (改善版) -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-3xl font-bold mb-4">こんな未来を実現したくありませんか？</h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                時間や場所に縛られない働き方、自分の力で価値を生み出す喜び、子育てと両立できる柔軟なライフスタイル…AIによる新しいキャリアの可能性。
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 左側：現状の課題 -->
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-pink-600 mb-6 flex items-center">
+                        <i class="fas fa-exclamation-circle mr-3 text-pink-500"></i>
+                        今のあなたが感じていること
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="concern-card pl-4 py-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-pink-400 mr-3"></i>
+                                <p>毎日時間に追われ、自分の時間が持てない</p>
+                            </div>
+                        </div>
+                        <div class="concern-card pl-4 py-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-baby text-pink-400 mr-3"></i>
+                                <p>子育てと仕事の両立が難しく、常に葛藤している</p>
+                            </div>
+                        </div>
+                        <div class="concern-card pl-4 py-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-coins text-pink-400 mr-3"></i>
+                                <p>収入に不安があり、将来の経済的自立に悩んでいる</p>
+                            </div>
+                        </div>
+                        <div class="concern-card pl-4 py-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-laptop-code text-pink-400 mr-3"></i>
+                                <p>Web制作やプログラミングは難しそうで挫折経験がある</p>
+                            </div>
+                        </div>
+                        <div class="concern-card pl-4 py-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-robot text-pink-400 mr-3"></i>
+                                <p>AIって便利そうだけど、私には使いこなせないかも…</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側：実現したい未来 -->
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-blue-600 mb-6 flex items-center">
+                        <i class="fas fa-star mr-3 text-blue-500"></i>
+                        AIスキルで実現する理想の未来
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="aspiration-card pl-4 py-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt text-blue-400 mr-3"></i>
+                                <p><strong>自分のペース</strong>で働き、子供の行事や急な体調不良にも対応できる</p>
+                            </div>
+                        </div>
+                        <div class="aspiration-card pl-4 py-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-home text-blue-400 mr-3"></i>
+                                <p>在宅で<strong>家族との時間</strong>を大切にしながら、充実したキャリアを築ける</p>
+                            </div>
+                        </div>
+                        <div class="aspiration-card pl-4 py-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-piggy-bank text-blue-400 mr-3"></i>
+                                <p>副業で月5〜10万円の<strong>安定収入</strong>を得て、経済的不安から解放される</p>
+                            </div>
+                        </div>
+                        <div class="aspiration-card pl-4 py-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-magic text-blue-400 mr-3"></i>
+                                <p>AIの力で<strong>挫折せずに</strong>Web制作やアプリ開発スキルを身につけられる</p>
+                            </div>
+                        </div>
+                        <div class="aspiration-card pl-4 py-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-users text-blue-400 mr-3"></i>
+                                <p>同じ志を持つ<strong>仲間との繋がり</strong>で、孤独感なく成長し続けられる</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-lg text-gray-700 mb-6">
+                    その気持ち、とてもよく分かります。<br>
+                    でも、諦めるのはまだ早い！<br>
+                    <span class="highlight">AI時代は、あなたの可能性を大きく広げるチャンスです</span>
+                </p>
+                <a href="#intro" class="btn-primary text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg">
+                    AIスキルで未来を切り拓く方法を知る
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- スクール紹介 -->
+    <section id="intro" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-3xl font-bold mb-4">
+                AIがあなたの<span class="text-purple-700">最強の味方</span>に！
+            </h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                AIeliaは、AIを活用してWebサイト制作、LPデザイン、さらにはオリジナルアプリや業務効率化ツールまで作れるようになる、<br class="hidden md:block">女性のためのAIクリエイタースクールです。
+            </p>
+
+            <div class="flex flex-col md:flex-row border rounded-xl overflow-hidden shadow-md">
+                <div class="md:w-1/2 p-8 bg-purple-50">
+                    <h3 class="text-2xl font-bold mb-6">Aielia（アイエリア）は、</h3>
+                    <p class="mb-4">AIを活用してWebサイト制作、LPデザイン、さらにはオリジナルアプリや業務効率化ツールまで作れるようになる、女性のためのAIクリエイタースクールです。</p>
+                    <p class="mb-4"><strong>AIを「使う」スキルを身につけることで</strong>、デザインも開発も、未経験からでも驚くほど効率的に、そして創造的に行えるようになります。</p>
+                    <p class="mb-6">あなたのマルチタスク能力とAIのパワーを掛け合わせれば、可能性は無限大です！</p>
+                    <div class="flex items-center">
+                        <i class="fas fa-lightbulb text-yellow-500 mr-3 text-xl"></i>
+                        <p class="italic">「AIは難しい」という先入観を捨て、AIを使いこなす最短ルートをご提案します</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-purple-700">学習スタイルと費用比較</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr class="bg-purple-100">
+                                    <th class="py-2 px-4 border">学習スタイル</th>
+                                    <th class="py-2 px-4 border">時間</th>
+                                    <th class="py-2 px-4 border">費用</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border">従来型スクール</td>
+                                    <td class="py-2 px-4 border">300〜450時間</td>
+                                    <td class="py-2 px-4 border">40〜120万円</td>
+                                </tr>
+                                <tr class="bg-green-50">
+                                    <td class="py-2 px-4 border font-bold">
+                                        AI活用スクール<br>（本スクール）
+                                    </td>
+                                    <td class="py-2 px-4 border font-bold text-green-700">
+                                        120〜220時間
+                                    </td>
+                                    <td class="py-2 px-4 border font-bold text-green-700">
+                                        3万〜35万円
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="mt-4 text-green-700 font-semibold">時間を約1/2に短縮、費用も1/3以下で実現！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ベネフィットセクション -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-3xl font-bold mb-4">
+                AIクリエイタースキルで<span class="text-purple-700">叶える未来</span>
+            </h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                AIを使いこなすスキルを身につけると、あなたの生活やキャリアはどのように変わるのでしょうか？
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- ベネフィット1 -->
+                <div class="bg-white rounded-lg p-6 shadow-md feature-card">
+                    <div class="text-purple-600 text-5xl mb-5">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">創造力UP</h3>
+                    <p class="text-gray-600">
+                        AIがアイデア出しからサポート。あなたの「作りたい」をスムーズに形にできます。子ども向けのオリジナル絵本や家族のWebアルバムも簡単に！
+                    </p>
+                </div>
+
+                <!-- ベネフィット2 -->
+                <div class="bg-white rounded-lg p-6 shadow-md feature-card">
+                    <div class="text-purple-600 text-5xl mb-5">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">時間的自由</h3>
+                    <p class="text-gray-600">
+                        AIで作業効率大幅UP！子育ての合間や家事の隙間時間を活用して働けます。学校行事や急な病気にも対応できる柔軟性を手に入れられます。
+                    </p>
+                </div>
+
+                <!-- ベネフィット3 -->
+                <div class="bg-white rounded-lg p-6 shadow-md feature-card">
+                    <div class="text-purple-600 text-5xl mb-5">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">収入UP</h3>
+                    <p class="text-gray-600">
+                        需要急増中のAI×Webスキルで、副業・フリーランスとして高単価案件も獲得可能。子どもの教育資金や家族旅行など、経済的な余裕が生まれます。
+                    </p>
+                </div>
+
+                <!-- ベネフィット4 -->
+                <div class="bg-white rounded-lg p-6 shadow-md feature-card">
+                    <div class="text-purple-600 text-5xl mb-5">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">市場価値UP</h3>
+                    <p class="text-gray-600">
+                        AI時代に求められる「AIフルスタックデザイナー」として、ブランク期間があっても復帰しやすく、長く活躍できるキャリアを築けます。
+                    </p>
+                </div>
+
+                <!-- ベネフィット5 -->
+                <div class="bg-white rounded-lg p-6 shadow-md feature-card">
+                    <div class="text-purple-600 text-5xl mb-5">
+                        <i class="fas fa-smile-beam"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">自信UP</h3>
+                    <p class="text-gray-600">
+                        自分の手で価値を生み出す達成感。「ママだから」と諦めていた夢にも再チャレンジ！家族にも尊敬される、新しい自分との出会いがあります。
+                    </p>
+                </div>
+
+                <!-- ベネフィット6 -->
+                <div class="bg-white rounded-lg p-6 shadow-md feature-card">
+                    <div class="text-purple-600 text-5xl mb-5">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">仲間との出会い</h3>
+                    <p class="text-gray-600">
+                        同じ目標を持つ女性たちと繋がり、刺激し合えるコミュニティ。子育ての悩みも共有しながら、孤独感なく学び続けられる環境です。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特徴・選ばれる理由 -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-3xl font-bold mb-4">
+                なぜ、AIelia（アイエリア）が<span class="text-purple-700">選ばれる</span>のか？
+            </h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                他のスクールとの大きな違いは、AI活用に特化していること、そして女性特有のニーズに応えた設計にあります。
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- 特徴1 -->
+                <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-purple-500">
+                    <div class="text-purple-600 text-5xl mb-5">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">AI活用に完全特化！<br>最新技術を実践的に学べる</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>最新AIツール（ChatGPT, Midjourney, Copilot等）の具体的な使い方を徹底解説</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>AIを「魔法」ではなく「便利な道具」として使いこなすノウハウを伝授</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>エラーや躓きポイント</strong>もAIを使って解決する方法を学べる</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 特徴2 -->
+                <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-pink-500">
+                    <div class="text-pink-600 text-5xl mb-5">
+                        <i class="fas fa-venus"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">女性のライフスタイルに<br>最適化された学習環境</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>子育て中でも無理なく学べる</strong>柔軟なカリキュラムとサポート体制</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>女性ならではの感性やコミュニケーション能力を活かせる課題設定</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>「マルチタスクが得意」を強みに変える、効率的な学習アプローチ</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 特徴3 -->
+                <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-blue-500">
+                    <div class="text-blue-600 text-5xl mb-5">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">副業・フリーランスとしての<br>自立まで徹底サポート</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>ポートフォリオ制作指導で、あなたのスキルを魅力的にアピール</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>案件獲得のコツ、クライアントとのコミュニケーション術も伝授</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>卒業後も安心</strong>のキャリア相談窓口あり</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- カリキュラム紹介 -->
+    <section id="curriculum" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-3xl font-bold mb-4">
+                未経験から<span class="text-purple-700">AIフルスタックデザイナー</span>へ！
+            </h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                3ヶ月で変わる実践カリキュラム。AIの力を借りて、効率よく着実にスキルを身につけていきます。
+            </p>
+
+            <div class="bg-white rounded-xl p-8 shadow-md mb-8">
+                <h3 class="text-xl font-bold mb-6">学習の流れ</h3>
+                
+                <!-- STEP1 -->
+                <div class="timeline-item">
+                    <div class="ml-6">
+                        <h4 class="text-lg font-bold text-purple-700">STEP1：AIとWebの基礎</h4>
+                        <p class="mb-2 text-gray-600">AIの基本概念とWebの仕組みを理解し、開発環境を準備します</p>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">ChatGPT活用法</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">開発環境構築</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">HTML/CSSの基礎</span>
+                        </div>
+                        <div class="parent-friendly inline-block">
+                            <i class="fas fa-check mr-2"></i>AIの助けで初心者でも理解しやすい！
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- STEP2 -->
+                <div class="timeline-item">
+                    <div class="ml-6">
+                        <h4 class="text-lg font-bold text-purple-700">STEP2：AIを活用したWebデザイン/LP制作</h4>
+                        <p class="mb-2 text-gray-600">AIデザインツールを使い、魅力的なWebサイトやLPを作れるようになります</p>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Midjourney</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Figma</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">AIコーディング支援</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">レスポンシブ対応</span>
+                        </div>
+                        <div class="parent-friendly inline-block">
+                            <i class="fas fa-check mr-2"></i>短時間でプロ級のデザインが作れる！
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- STEP3 -->
+                <div class="timeline-item">
+                    <div class="ml-6">
+                        <h4 class="text-lg font-bold text-purple-700">STEP3：AIを活用したアプリ/ツール開発入門</h4>
+                        <p class="mb-2 text-gray-600">ノーコード/ローコードツールとAIを連携し、実用的なアプリを開発します</p>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Supabase</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Vercel</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">GitHub Copilot</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">API連携</span>
+                        </div>
+                        <div class="parent-friendly inline-block">
+                            <i class="fas fa-check mr-2"></i>AIがコードの難しい部分をサポート！
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- STEP4 -->
+                <div class="timeline-item">
+                    <div class="ml-6">
+                        <h4 class="text-lg font-bold text-purple-700">STEP4：実践！オリジナル作品制作</h4>
+                        <p class="mb-2 text-gray-600">企画から実装まで、AIをフル活用したポートフォリオ作品を制作します</p>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">ポートフォリオ制作</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">進捗管理</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">デバッグ技術</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">ユーザー体験</span>
+                        </div>
+                        <div class="parent-friendly inline-block">
+                            <i class="fas fa-check mr-2"></i>躓いてもスタッフが優しくフォロー！
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- STEP5 -->
+                <div class="timeline-item">
+                    <div class="ml-6">
+                        <h4 class="text-lg font-bold text-purple-700">STEP5：収益化への道</h4>
+                        <p class="mb-2 text-gray-600">ポートフォリオサイト公開から案件獲得まで、実践的なノウハウを学びます</p>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">ポートフォリオサイト公開</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">クラウドソーシング活用法</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">案件獲得ノウハウ</span>
+                        </div>
+                        <div class="parent-friendly inline-block">
+                            <i class="fas fa-check mr-2"></i>子育て中でも始められるお仕事紹介！
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-purple-50 rounded-xl p-6 shadow-md">
+                <div class="text-center">
+                    <h4 class="text-xl font-bold text-purple-700 mb-4">差別化ポイント</h4>
+                    <ul class="inline-block text-left space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-yellow-500 mr-3"></i>
+                            <span>ChatGPT/AI活用を前提とした<strong>今どき設計</strong></span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-yellow-500 mr-3"></i>
+                            <span><strong>作る → 詰まる → AIと解決 → 成果物</strong>というリアルな循環</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-yellow-500 mr-3"></i>
+                            <span>Supabase、Vercelなど<strong>モダン技術の活用</strong>で、初心者でも即公開！</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-yellow-500 mr-3"></i>
+                            <span><strong>エラー解決の方法</strong>も丁寧に指導。つまずいても安心です！</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 講師紹介 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-3xl font-bold mb-4">
+                あなたの学びを<span class="text-purple-700">全力でサポート</span>する講師陣
+            </h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                AIeliaの講師は全員、最新のAI技術に精通した現役エンジニア。<br>女性の学びやすさを第一に考えた指導を行います。
+            </p>
+
+            <div class="flex flex-col md:flex-row gap-8 justify-center">
+                <!-- 講師1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden md:max-w-sm">
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="講師" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-purple-100">
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-2">佐藤 美咲</h3>
+                        <p class="text-purple-700 text-center text-sm mb-4">メイン講師 / Webエンジニア</p>
+                        <p class="text-gray-600 mb-4">
+                            大手IT企業で5年間フロントエンド開発に従事。現在はフリーランスとして活躍しながら、AI技術を活用したWebサイト開発を得意とする。2児の母として、子育てと仕事の両立経験も豊富。
+                        </p>
+                        <p class="text-gray-700 italic">
+                            "AIは難しくありません。私たちがあなたの可能性を引き出します！子育て中の方も安心して学べる環境をお約束します。"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 講師2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden md:max-w-sm">
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="講師" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-purple-100">
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-2">高橋 裕太</h3>
+                        <p class="text-purple-700 text-center text-sm mb-4">テクニカルアドバイザー / バックエンドエンジニア</p>
+                        <p class="text-gray-600 mb-4">
+                            AIエンジニアとして多数のプロジェクトを手がける。ChatGPTやGitHub Copilotなどのツールを活用したコーディング効率化のエキスパートとして、初心者にもわかりやすく技術を解説。
+                        </p>
+                        <p class="text-gray-700 italic">
+                            "AIを味方につければ、プログラミング初心者でもアプリ開発は可能です。エラーで躓いても、一緒に解決していきましょう！"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- サポート・メンター -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden md:max-w-sm">
+                    <div class="p-6">
+                        <div class="mb-4 text-center">
+                            <div class="w-32 h-32 rounded-full mx-auto bg-purple-100 flex items-center justify-center">
+                                <i class="fas fa-users text-5xl text-purple-500"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-2">サポートメンバー</h3>
+                        <p class="text-purple-700 text-center text-sm mb-4">現役エンジニア・デザイナーチーム</p>
+                        <p class="text-gray-600 mb-4">
+                            AI活用スキルに長けた現役のエンジニア・デザイナーがメンターとして参加。個別の質問対応やコードレビューなど、きめ細かいサポートを提供します。
+                        </p>
+                        <p class="text-gray-700 italic">
+                            "挫折しそうな時も温かく寄り添います。エラーやバグも怖くありません。優しくフォローし、最後まで伴走します！"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- サポート体制 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-3xl font-bold mb-4">
+                一人で悩ませない！<span class="text-purple-700">充実のサポート</span>体制
+            </h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                AIeliaでは、学習中のつまずきや不安を解消するための手厚いサポート体制を整えています。<br>
+                特に子育て世代の方でも安心して学べるよう、柔軟な対応を心がけています。
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- サポート1 -->
+                <div class="bg-white rounded-lg p-6 shadow-md feature-card">
+                    <div class="text-purple-600 text-4xl mb-4">
+                        <i class="far fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">いつでも質問OK！<br>チャットサポート</h3>
+                    <p class="text-gray-600">
+                        専用のDiscordチャンネルで24時間質問を受け付け。平日であれば最短1時間以内に回答します。夜中に学習する方や、子どもが寝た後に勉強する方も安心です。
+                    </p>
+                    <div class="mt-4 flex items-center text-green-700">
+                        <i class="fas fa-heart mr-2"></i>
+                        <span class="text-sm">子育て中でも安心の柔軟対応</span>
+                    </div>
+                </div>
+
+                <!-- サポート2 -->
+                <div class="bg-white rounded-lg p-6 shadow-md feature-card">
+                    <div class="text-purple-600 text-4xl mb-4">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">エラー解決サポートと<br>個別メンタリング</h3>
+                    <p class="text-gray-600">
+                        プログラミングのエラーやAIツールの使い方で躓いても大丈夫。画面共有で一緒に解決します。また、月1回の個別メンタリングで学習の悩みを相談できます。
+                    </p>
+                    <div class="mt-4 flex items-center text-green-700">
+                        <i class="fas fa-thumbs-up mr-2"></i>
+                        <span class="text-sm">初心者でも安心の手厚いフォロー</span>
+                    </div>
+                </div>
+
+                <!-- サポート3 -->
+                <div class="bg-white rounded-lg p-6 shadow-md feature-card">
+                    <div class="text-purple-600 text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">仲間と学べる！<br>オンラインコミュニティ</h3>
+                    <p class="text-gray-600">
+                        同じ目標を持つ女性たちと繋がれるコミュニティ。子育ての悩みの共有から、技術的な質問まで、気軽に話せる仲間がいると学習も続きます。
+                    </p>
+                    <div class="mt-4 flex items-center text-green-700">
+                        <i class="fas fa-child mr-2"></i>
+                        <span class="text-sm">育児と学習の両立ノウハウも共有</span>
+                    </div>
+                </div>
+
+                <!-- サポート4 -->
+                <div class="bg-white rounded-lg p-6 shadow-md feature-card">
+                    <div class="text-purple-600 text-4xl mb-4">
+                        <i class="fas fa-laptop-house"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">定期的なオンライン<br>勉強会・もくもく会</h3>
+                    <p class="text-gray-600">
+                        月2回のオンライン勉強会で新しい知識をアップデート。週1回のもくもく会で集中して作業しましょう。子どもが遊んでいても気にせず参加できる和やかな雰囲気です。
+                    </p>
+                    <div class="mt-4 flex items-center text-green-700">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span class="text-sm">録画視聴可能で予定調整しやすい</span>
+                    </div>
+                </div>
+
+                <!-- サポート5 -->
+                <div class="bg-white rounded-lg p-6 shadow-md feature-card">
+                    <div class="text-purple-600 text-4xl mb-4">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">卒業後の<br>キャリアサポート</h3>
+                    <p class="text-gray-600">
+                        ポートフォリオの添削、案件獲得のアドバイス、クライアントとのコミュニケーション方法など、実際に仕事を獲得するまでをサポート。フリーランスとしての歩き方を指導します。
+                    </p>
+                    <div class="mt-4 flex items-center text-green-700">
+                        <i class="fas fa-hand-holding-usd mr-2"></i>
+                        <span class="text-sm">副業から始めて徐々にキャリアアップ</span>
+                    </div>
+                </div>
+
+                <!-- サポート6 -->
+                <div class="bg-white rounded-lg p-6 shadow-md feature-card">
+                    <div class="text-purple-600 text-4xl mb-4">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AIツール・テンプレート<br>ライブラリ提供</h3>
+                    <p class="text-gray-600">
+                        学習効率を上げるための厳選されたAIプロンプト集やテンプレートを提供。「こう言えばAIが上手く反応する」というコツを学べるので、AIとのコミュニケーション能力が高まります。
+                    </p>
+                    <div class="mt-4 flex items-center text-green-700">
+                        <i class="fas fa-magic mr-2"></i>
+                        <span class="text-sm">実用的なツールで作業効率アップ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-purple-50 rounded-xl p-8 shadow-md">
+                <h3 class="text-2xl font-bold text-center mb-6 text-purple-700">子育て世代に優しい3つの安心ポイント</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-md mb-4">
+                            <i class="fas fa-stopwatch text-3xl text-purple-500"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2 text-center">柔軟な学習スケジュール</h4>
+                        <p class="text-center text-gray-600">
+                            自分のペースで学べる動画教材中心。「今日は子どもの体調が悪くて…」という時も、焦らず再開できます。
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-md mb-4">
+                            <i class="fas fa-baby text-3xl text-purple-500"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2 text-center">子連れOKの学習環境</h4>
+                        <p class="text-center text-gray-600">
+                            オンラインセッションは子連れ参加OK。子どもの声が聞こえても誰も気にしない、温かい雰囲気です。
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-md mb-4">
+                            <i class="fas fa-home text-3xl text-purple-500"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2 text-center">家庭と両立できる仕事紹介</h4>
+                        <p class="text-center text-gray-600">
+                            卒業後は、育児と両立できる案件や短時間で取り組める仕事を優先的にご紹介します。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 様々な職種からAIフルスタックデザイナーへ Before/After事例セクション -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-center text-3xl font-bold mb-4">
+          <span class="text-purple-700">様々な職種</span>からAIフルスタックデザイナーへ
+        </h2>
+        <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12 text-base md:text-lg">
+          AIの力を活用すれば、どんな職種からでもAIフルスタックデザイナーに転身できます。<br>
+          実際にキャリアチェンジした方々の例をご紹介します。
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+          <!-- 1: グラフィックデザイナー -->
+          <div class="bg-gradient-to-br from-purple-50 to-white rounded-xl shadow-lg p-8 flex flex-col">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-purple-700 mb-4">グラフィックデザイナー</h3>
+              <div class="flex flex-col md:flex-row gap-4">
+                <div class="bg-gray-100 rounded-lg p-4 flex-1">
+                  <div class="font-bold text-gray-500 mb-2">Before</div>
+                  <ul class="list-disc pl-5 text-gray-600 text-sm">
+                    <li>紙・印刷物中心の仕事で将来が不安</li>
+                    <li>Webやアプリ制作は未経験</li>
+                    <li>AIの進化に置いていかれそう</li>
+                  </ul>
+                </div>
+                <div class="bg-purple-100 rounded-lg p-4 flex-1">
+                  <div class="font-bold text-purple-700 mb-2">After</div>
+                  <ul class="list-disc pl-5 text-gray-700 text-sm">
+                    <li>AI活用でWebデザイン・コーディングも一人で</li>
+                    <li>アプリUI/UXも提案できる幅広いスキル</li>
+                    <li>副業・フリーランス案件も獲得</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mt-4 text-gray-600 text-sm italic">
+                <span class="inline-block bg-purple-200 text-purple-800 rounded-full px-3 py-1 mr-2 mb-2">実例</span>
+                「紙のデザインしかできなかった私が、AIと一緒にWebサイトやアプリまで作れるようになり、仕事の幅が一気に広がりました！」
+              </div>
+            </div>
+          </div>
+          <!-- 2: Webライター -->
+          <div class="bg-gradient-to-br from-pink-50 to-white rounded-xl shadow-lg p-8 flex flex-col">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-pink-600 mb-4">Webライター</h3>
+              <div class="flex flex-col md:flex-row gap-4">
+                <div class="bg-gray-100 rounded-lg p-4 flex-1">
+                  <div class="font-bold text-gray-500 mb-2">Before</div>
+                  <ul class="list-disc pl-5 text-gray-600 text-sm">
+                    <li>記事執筆だけで収入が頭打ち</li>
+                    <li>Web制作やデザインは苦手意識</li>
+                    <li>AIの使い方が分からない</li>
+                  </ul>
+                </div>
+                <div class="bg-pink-100 rounded-lg p-4 flex-1">
+                  <div class="font-bold text-pink-600 mb-2">After</div>
+                  <ul class="list-disc pl-5 text-gray-700 text-sm">
+                    <li>AIを活用したLP・HP制作も受注</li>
+                    <li>企画・デザイン・執筆を一気通貫で提案</li>
+                    <li>クライアント単価UP＆新規案件も獲得</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mt-4 text-gray-600 text-sm italic">
+                <span class="inline-block bg-pink-200 text-pink-800 rounded-full px-3 py-1 mr-2 mb-2">実例</span>
+                「AIツールでデザインやコーディングもできるようになり、ライターから“AIクリエイター”へキャリアアップできました！」
+              </div>
+            </div>
+          </div>
+          <!-- 3: 飲食店スタッフ -->
+          <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg p-8 flex flex-col">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-blue-600 mb-4">飲食店スタッフ</h3>
+              <div class="flex flex-col md:flex-row gap-4">
+                <div class="bg-gray-100 rounded-lg p-4 flex-1">
+                  <div class="font-bold text-gray-500 mb-2">Before</div>
+                  <ul class="list-disc pl-5 text-gray-600 text-sm">
+                    <li>パソコン作業は苦手</li>
+                    <li>自分にクリエイティブな仕事は無理と思っていた</li>
+                    <li>将来の働き方に不安</li>
+                  </ul>
+                </div>
+                <div class="bg-blue-100 rounded-lg p-4 flex-1">
+                  <div class="font-bold text-blue-600 mb-2">After</div>
+                  <ul class="list-disc pl-5 text-gray-700 text-sm">
+                    <li>AIサポートでゼロからWeb制作を習得</li>
+                    <li>自分のアイデアを形にできる自信</li>
+                    <li>在宅ワーク＆副業も実現</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mt-4 text-gray-600 text-sm italic">
+                <span class="inline-block bg-blue-200 text-blue-800 rounded-full px-3 py-1 mr-2 mb-2">実例</span>
+                「パソコン初心者でもAIのおかげで、Webサイトを作れるようになり、在宅ワークで家計も助かっています！」
+              </div>
+            </div>
+          </div>
+          <!-- 4: 一般事務 -->
+          <div class="bg-gradient-to-br from-green-50 to-white rounded-xl shadow-lg p-8 flex flex-col">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-green-600 mb-4">一般事務</h3>
+              <div class="flex flex-col md:flex-row gap-4">
+                <div class="bg-gray-100 rounded-lg p-4 flex-1">
+                  <div class="font-bold text-gray-500 mb-2">Before</div>
+                  <ul class="list-disc pl-5 text-gray-600 text-sm">
+                    <li>ルーティンワーク中心でやりがいが薄い</li>
+                    <li>クリエイティブな仕事に憧れがある</li>
+                    <li>自分にできるか不安</li>
+                  </ul>
+                </div>
+                <div class="bg-green-100 rounded-lg p-4 flex-1">
+                  <div class="font-bold text-green-600 mb-2">After</div>
+                  <ul class="list-disc pl-5 text-gray-700 text-sm">
+                    <li>AIツールで企画・デザイン・実装まで挑戦</li>
+                    <li>新しいスキルで社内外から頼られる存在に</li>
+                    <li>将来のキャリアの選択肢が広がった</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mt-4 text-gray-600 text-sm italic">
+                <span class="inline-block bg-green-200 text-green-800 rounded-full px-3 py-1 mr-2 mb-2">実例</span>
+                「AIで“作る力”を身につけ、職場でも家庭でも自信を持てるようになりました！」
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <a href="#contact" class="btn-primary text-white px-8 py-3 rounded-full font-bold shadow-lg hover:from-purple-700 hover:to-pink-600 transition-colors">
+            まずは個別相談であなたの可能性を知る
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 料金プラン -->
+    <section id="price" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-3xl font-bold mb-4">
+                未来への投資。<span class="text-purple-700">選べる料金プラン</span>
+            </h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                あなたのライフスタイルや目標に合わせて、最適なプランをお選びいただけます。<br>
+                どのプランも、AI時代のスキルを身につける価値ある投資です。
+            </p>
+
+            <div class="flex flex-col md:flex-row gap-8 mb-12 justify-center">
+                <!-- プラン1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 md:w-1/4 price-card">
+                    <div class="bg-gray-100 py-4 text-center">
+                        <h3 class="text-xl font-bold">ライトプラン</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-3xl font-bold">49,800円</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>AIクリエイター教材</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>動画学習コンテンツ</span>
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-times mr-2"></i>
+                                <span>なるへそ共有集会</span>
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-times mr-2"></i>
+                                <span>Chatworkサポート</span>
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-times mr-2"></i>
+                                <span>サポート</span>
+                            </li>
+                          
+                        </ul>
+                        <a href="#contact" class="btn-primary text-white w-full py-3 rounded-full font-semibold text-center block">申し込む</a>
+                    </div>
+                </div>
+
+                <!-- プラン2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 md:w-1/4 price-card relative">
+                    <div class="bg-purple-600 py-4 text-center">
+                        <h3 class="text-xl font-bold text-white">ベーシックプラン</h3>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-3xl font-bold">198,000円</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>ライトプランのすべて含む</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>なるへそ共有集会</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Chatworkサポート付き</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>半年サポート</span>
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-times mr-2"></i>
+                                <span>個別相談</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="btn-primary text-white w-full py-3 rounded-full font-semibold text-center block">申し込む</a>
+                    </div>
+                </div>
+
+                <!-- プラン3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 md:w-1/4 price-card">
+                    <div class="bg-gradient-to-r from-purple-600 to-pink-500 py-4 text-center">
+                        <h3 class="text-xl font-bold text-white">エクセレントプラン</h3>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-3xl font-bold">330,000円</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>ベーシックプランのすべて含む</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>アプリ開発コンサル</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>個別相談</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Chatworkサポート付き</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>一年サポート</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="btn-primary text-white w-full py-3 rounded-full font-semibold text-center block">申し込む</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6 shadow-md mb-12">
+                <h3 class="text-xl font-bold mb-6 text-center">他社比較とコストパフォーマンス</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border">
+                        <thead class="bg-purple-100">
+                            <tr>
+                                <th class="py-3 px-4 border">サービス名</th>
+                                <th class="py-3 px-4 border">総費用</th>
+                                <th class="py-3 px-4 border">学習時間</th>
+                                <th class="py-3 px-4 border">特徴</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-3 px-4 border">DMM WEBCAMP</td>
+                                <td class="py-3 px-4 border">約70万〜100万</td>
+                                <td class="py-3 px-4 border">約400〜600時間</td>
+                                <td class="py-3 px-4 border">就職保証つき。AI活用ほぼ無し。</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="py-3 px-4 border">TECH CAMP</td>
+                                <td class="py-3 px-4 border">約65万〜</td>
+                                <td class="py-3 px-4 border">約400時間</td>
+                                <td class="py-3 px-4 border">フルスタック型。自走力重視。</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 border">Udemy（独学）</td>
+                                <td class="py-3 px-4 border">1講座1,500〜3,000円</td>
+                                <td class="py-3 px-4 border">自由</td>
+                                <td class="py-3 px-4 border">安いがサポート無し。迷子になりやすい。</td>
+                            </tr>
+                            <tr class="bg-green-50">
+                                <td class="py-3 px-4 border font-bold">AIelia<br>（本スクール）</td>
+                                <td class="py-3 px-4 border font-bold text-green-700">3万〜30万</td>
+                                <td class="py-3 px-4 border font-bold text-green-700">120〜220時間</td>
+                                <td class="py-3 px-4 border">
+                                    <strong>AI活用で時短・高効率。</strong><br>
+                                    実装から公開までサポート！<br>
+                                    <span class="text-purple-700">子育て世代に優しい学習環境</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-4 text-center text-green-700 font-semibold">「全部入り」なのに手が届く価格。それがAIeliaの最大の魅力です。</p>
+            </div>
+
+            <div class="text-center">
+                <p class="text-lg mb-6">
+                    このスキルは一生モノ。AIという強力なパートナーを得ることで、<br>
+                    あなたのキャリアに新たな可能性が広がります。
+                </p>
+                <a href="#contact" class="btn-primary text-white px-8 py-3 rounded-full font-bold inline-block shadow-lg">
+                    まずは個別相談で詳しく話を聞く
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくあるご質問 -->
+    <section id="faq" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-3xl font-bold mb-4">
+                あなたの疑問を<span class="text-purple-700">スッキリ解消</span>！
+            </h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                AIeliaについてよくいただくご質問をまとめました。<br>
+                他にも不明点がありましたら、お気軽に個別相談でお問い合わせください。
+            </p>
+
+            <div class="max-w-3xl mx-auto">
+                <!-- Q1 -->
+                <div class="bg-white rounded-lg shadow-md mb-4 overflow-hidden qa-item">
+                    <div class="p-5">
+                        <div class="flex items-start mb-3">
+                            <span class="bg-purple-100 text-purple-700 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">Q</span>
+                            <h3 class="font-bold text-lg">全くの初心者でも大丈夫ですか？</h3>
+                        </div>
+                        <div class="pl-11">
+                            <p>はい、大丈夫です！AIがあなたの学習をサポートするので、プログラミングの基礎から丁寧に教えます。「分からない」を「分かる」に変えるための具体的な質問方法なども学べるので、初心者でも安心してスタートできます。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="bg-white rounded-lg shadow-md mb-4 overflow-hidden qa-item">
+                    <div class="p-5">
+                        <div class="flex items-start mb-3">
+                            <span class="bg-purple-100 text-purple-700 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">Q</span>
+                            <h3 class="font-bold text-lg">PCスキルはどの程度必要ですか？</h3>
+                        </div>
+                        <div class="pl-11">
+                            <p>基本的なPC操作（タイピング、インターネット検索、ファイル保存など）ができれば問題ありません。足りないPCスキルは講座の中で自然に身についていきますので、初心者でもご安心ください。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="bg-white rounded-lg shadow-md mb-4 overflow-hidden qa-item">
+                    <div class="p-5">
+                        <div class="flex items-start mb-3">
+                            <span class="bg-purple-100 text-purple-700 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">Q</span>
+                            <h3 class="font-bold text-lg">AIについて何も知らなくてもついていけますか？</h3>
+                        </div>
+                        <div class="pl-11">
+                            <p>もちろんです。AIの基礎知識から丁寧に解説します。AIに上手に指示を出す「プロンプトエンジニアリング」の基本から学べるので、AI初心者でも効果的に活用できるようになります。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="bg-white rounded-lg shadow-md mb-4 overflow-hidden qa-item">
+                    <div class="p-5">
+                        <div class="flex items-start mb-3">
+                            <span class="bg-purple-100 text-purple-700 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">Q</span>
+                            <h3 class="font-bold text-lg">どのくらいの学習時間が必要ですか？</h3>
+                        </div>
+                        <div class="pl-11">
+                            <p>3ヶ月のカリキュラムで、週7〜10時間程度の学習時間を推奨しています。ただ、子育て中の方などは週3〜5時間からでも始められるよう柔軟なカリキュラム設計になっています。ご自身のペースで進められますので、焦る必要はありません。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="bg-white rounded-lg shadow-md mb-4 overflow-hidden qa-item">
+                    <div class="p-5">
+                        <div class="flex items-start mb-3">
+                            <span class="bg-purple-100 text-purple-700 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">Q</span>
+                            <h3 class="font-bold text-lg">子育て中でも続けられますか？</h3>
+                        </div>
+                        <div class="pl-11">
+                            <p>子育て世代の方のために特別に設計されたスクールです。お子さんの急な病気や行事で学習が中断しても大丈夫なように、柔軟なカリキュラムと手厚いサポートを用意しています。子育て経験のあるメンターもいるので、両立のコツも教えてもらえます。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="bg-white rounded-lg shadow-md mb-4 overflow-hidden qa-item">
+                    <div class="p-5">
+                        <div class="flex items-start mb-3">
+                            <span class="bg-purple-100 text-purple-700 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">Q</span>
+                            <h3 class="font-bold text-lg">卒業後、本当に副業で稼げるようになりますか？</h3>
+                        </div>
+                        <div class="pl-11">
+                            <p>スキル習得はもちろん、案件獲得ノウハウまでサポートします。3ヶ月で基礎を身につけ、さらに実践を重ねることで、LP制作やWebサイト制作などの案件を受注できるようになります。コーチングプランでは卒業後の案件獲得までサポートするので、より確実に収益化への道を歩めます。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden qa-item">
+                    <div class="p-5">
+                        <div class="flex items-start mb-3">
+                            <span class="bg-purple-100 text-purple-700 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">Q</span>
+                            <h3 class="font-bold text-lg">他のスクールとの違いは何ですか？</h3>
+                        </div>
+                        <div class="pl-11">
+                            <p>3つの大きな違いがあります。1つ目はAI活用に完全特化していること。2つ目は女性、特に子育て世代の特性や状況に合わせた柔軟な学習環境を提供していること。3つ目は単なる技術習得だけでなく、副業やフリーランスとしての収益化まで徹底サポートすることです。さらに、従来のプログラミングスクールと比べて学習時間を半減させながら、実践的なスキルを身につけられるのが最大の強みです。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA・クロージング -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-3xl font-bold mb-4">
+                さあ、AIと一緒に<span class="text-purple-700">新しい扉</span>を開きませんか？
+            </h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                AI時代は、あなたのクリエイティビティとマルチタスク能力が輝く時代です。<br>
+                スキルを身につけ、時間と場所に縛られない自由な働き方と、<br>
+                豊かな未来を手に入れましょう。
+            </p>
+
+            <div class="bg-purple-50 rounded-xl p-8 shadow-lg max-w-3xl mx-auto">
+                <div class="text-center mb-8">
+                    <span class="inline-block bg-red-500 text-white text-sm font-bold px-3 py-1 rounded-full mb-4">
+                        先着50名様限定！モニター価格適用中
+                    </span>
+                    <h3 class="text-2xl font-bold mb-4">まずは無料の個別相談から</h3>
+                    <p class="text-gray-600">
+                        あなたの状況やご希望に合わせて、最適な学習プランをご提案します。<br>
+                        質問や不安な点など、何でもお気軽にご相談ください。
+                    </p>
+                </div>
+
+                <form class="space-y-4">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <div class="md:w-1/2">
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">お名前</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <div class="md:w-1/2">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">メールアドレス</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">ご質問・ご相談内容</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn-primary text-white w-full py-3 rounded-full font-bold">
+                            <i class="far fa-calendar-check mr-2"></i>個別相談を予約する
+                            <small class="block text-xs mt-1 font-normal">平日・土日開催！あなたの都合の良い日時で調整します</small>
+                        </button>
+                    </div>
+                </form>
+
+                <p class="text-center text-sm text-gray-500 mt-6">
+                    ※個別相談は完全無料です。営業などの勧誘を目的とせず、あなたに合った学習方法をご提案します。
+                </p>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-lg mb-4">
+                    ほんの少しの勇気と行動が、あなたの未来を大きく変えます。<br>
+                    私たちが全力でサポートしますので、まずはお気軽にご相談ください。
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="text-purple-600 hover:text-purple-800 transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-purple-600 hover:text-purple-800 transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-purple-600 hover:text-purple-800 transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">
+                        <span class="text-purple-300">AI</span>elia
+                    </h3>
+                    <p class="text-gray-400 max-w-xs">
+                        女性のためのAIクリエイタースクール。AIを活用して、あなたの創造性を最大限に引き出します。
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3">スクール情報</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">運営会社</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">スクール理念</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">講師紹介</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3">コース・料金</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">カリキュラム詳細</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">料金プラン</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">キャンペーン情報</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3">サポート</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">よくある質問</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">お問い合わせ</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">プライバシーポリシー</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+                <p class="text-gray-400 text-sm">© 2023 AIelia All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 追従CTA -->
+    <div class="fixed bottom-0 left-0 w-full bg-white shadow-lg py-3 px-4 md:hidden z-10">
+        <a href="#contact" class="btn-primary text-white w-full py-2 rounded-full font-semibold text-center block">
+            <i class="far fa-comment-dots mr-1"></i> 個別相談に申し込む
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
